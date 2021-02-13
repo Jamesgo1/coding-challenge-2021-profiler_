@@ -1,4 +1,4 @@
-# City Finder Processor
+# City Finder Processor for NI Assembly Hansard Minutes
 
 This is an example of a Lintol processor. You can run it like so:
 
