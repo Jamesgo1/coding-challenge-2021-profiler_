@@ -1,0 +1,271 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      .renderjson a { text-decoration: none; }
+      .renderjson .disclosure { color: crimson;
+                                font-size: 150%; }
+      .renderjson .syntax { color: grey; }
+      .renderjson .string { color: darkred; }
+      .renderjson .number { color: darkcyan; }
+      .renderjson .boolean { color: blueviolet; }
+      .renderjson .key    { color: darkblue; }
+      .renderjson .keyword { color: blue; }
+      .renderjson .object.syntax { color: lightseagreen; }
+      .renderjson .array.syntax  { color: orange; }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      tbody td {
+        border: thin #ddd solid;
+        padding: 4px;
+      }
+      thead tr {
+        background: black;
+        color: white;
+      }
+      tbody tr:nth-child(even) {
+        background: #ddd;
+      }
+      tbody tr:nth-child(odd) {
+        background: white;
+      }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <title>Doorstep Report</title>
+    <script>var annotations = {};</script>
+
+    <style>
+        .annotation-box {
+          position: relative;
+        }
+        .annotation {
+          padding: 2px;
+          border-radius: 3px;
+          border-bottom: 5px solid black;
+          transition: background-color 0.5s linear;
+        }
+        .annotation-note {
+          z-index: 1;
+          display: none;
+          position: absolute;
+          top: 100%;
+          margin-top: 10px;
+          left: 0px;
+          width: 90%;
+          background-color: white;
+          padding: 2%;
+          border-bottom: thick #aaa solid;
+          border-left: 3px #ccc solid;
+          box-shadow: 0 5px 5px 5px rgba(255, 255, 255, 0.3);
+        }
+        .annotation-note-content {
+          display: none;
+        }
+        .annotation-tag-WARNING {
+          border-color: #fca;
+        }
+        .annotation-tag-WARNING:hover {
+          background: #fca;
+        }
+        .annotation-tag-INFO {
+          border-color: #aaf;
+        }
+        .annotation-tag-INFO:hover {
+          background: #aaf;
+        }
+    </style>
+  </head>
+  <body>
+
+<div class="warnings">
+<h3>Warnings</h3>
+<table>
+<thead><tr><th>Processor</th><th>Location</th><th>Issue</th><th>Description</th><th>On Item</th><th>Issue Data</th><th>Item</th><th>Context</tr></thead>
+<tbody>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 283}</td><td>city-cropped-up</td><td>Found belfast</td><td>
+            <script>
+                annotations['content-d7bd67ed-fede-434f-9e12-dff0bb446bdb'] = [{"text": "Occurence of Belfast", "ranges": [{"start": "/", "end": "/", "startOffset": 154, "endOffset": 161}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-d7bd67ed-fede-434f-9e12-dff0bb446bdb" class="annotation-box">
+            On a point of order, Mr Speaker. Mr [GDPRREDACT] referred to a tightening of the noose. As Members will be aware, there was disgraceful graffiti in south Belfast referring to the same thing -- a noose -- and the [GDPRREDACT], [GDPRREDACT]. Is that language appropriate in this place?
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 925}</td><td>city-cropped-up</td><td>Found belfast</td><td>
+            <script>
+                annotations['content-29790f4b-3468-4ed3-b428-4c1e657b7a89'] = [{"text": "Occurence of Belfast", "ranges": [{"start": "/", "end": "/", "startOffset": 379, "endOffset": 386}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-29790f4b-3468-4ed3-b428-4c1e657b7a89" class="annotation-box">
+            Nevertheless, the changes are welcome now, but there is something else -- I and others have raised it in Committee -- that needs to be teased out: the proxy voting system is too rigid. There is flexibility in light of the pandemic, which is welcome, but politics is not just about what happens in the Building; it is about what happens in communities. It does not affect me as a Belfast MLA, but, quite often, MLAs have to travel when that may not be conducive to their or their constituents time. We need to look at and address proxy voting in the long term. Currently, proxy voting may not suit everybody. I am a single MLA, and there are other single MLAs and parties, and others who are independents, such as [GDPRREDACT] and [GDPRREDACT]. They have said that they may not want to lend their vote, so to speak, to other parties because they want to be independent or separate. That needs to be looked at in the long term.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+</tbody>
+</table>
+</div>
+<hr/>
+<div class="info">
+<h3>Info</h3>
+<table>
+<thead><tr><th>Processor</th><th>Location</th><th>Issue</th><th>Description</th><th>On Item</th><th>Issue Data</th><th>Item</th><th>Context</tr></thead>
+<tbody>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 293}</td><td>city-cropped-up</td><td>Found brussels</td><td>
+            <script>
+                annotations['content-ff90e4ad-f048-40aa-a3eb-f30964ba38ca'] = [{"text": "Occurence of Brussels", "ranges": [{"start": "/", "end": "/", "startOffset": 146, "endOffset": 154}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-ff90e4ad-f048-40aa-a3eb-f30964ba38ca" class="annotation-box">
+            It will get worse, because, by this time next year, under this very protocol, when the noose tightens, our medicines will be under the control of Brussels. That is what the protocol says. So, if ever there was a wake-up call to recognise the malevolent and iniquitous intent of the protocol --
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 498}</td><td>city-cropped-up</td><td>Found dublin</td><td>
+            <script>
+                annotations['content-18736b6a-8123-44f7-8f9c-a665010cc954'] = [{"text": "Occurence of Dublin", "ranges": [{"start": "/", "end": "/", "startOffset": 273, "endOffset": 279}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-18736b6a-8123-44f7-8f9c-a665010cc954" class="annotation-box">
+            The issues with the protocol can be resolved. No one is starving, as [GDPRREDACT] claims, and the economy has not been strangled as a result of the protocol. Those are myths and mistruths. They are provocative terms, so let us calm ourselves and work with one another, the Dublin and British Governments and the EU to ensure that whatever outstanding issues there are with the protocol can be resolved. However, I appeal to you: calm your language, stop sabre-rattling and we will get through this.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 260}</td><td>city-cropped-up</td><td>Found london</td><td>
+            <script>
+                annotations['content-9890aa27-fefa-4b7f-863a-7c58b961353c'] = [{"text": "Occurence of London", "ranges": [{"start": "/", "end": "/", "startOffset": 93, "endOffset": 99}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-9890aa27-fefa-4b7f-863a-7c58b961353c" class="annotation-box">
+            Over 100 years ago, [GDPRREDACT] said, "Neither King nor [GDPRREDACT]". Today, it is neither London nor Brussels but a socialist Ireland, and we need to put peoples health before profit. With the centenary of partition this year, it is more relevant than ever.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 260}</td><td>city-cropped-up</td><td>Found brussels</td><td>
+            <script>
+                annotations['content-a8792504-4c85-480a-8de6-7a6d7c25f95d'] = [{"text": "Occurence of Brussels", "ranges": [{"start": "/", "end": "/", "startOffset": 104, "endOffset": 112}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-a8792504-4c85-480a-8de6-7a6d7c25f95d" class="annotation-box">
+            Over 100 years ago, [GDPRREDACT] said, "Neither King nor [GDPRREDACT]". Today, it is neither London nor Brussels but a socialist Ireland, and we need to put peoples health before profit. With the centenary of partition this year, it is more relevant than ever.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 270}</td><td>city-cropped-up</td><td>Found derry</td><td>
+            <script>
+                annotations['content-f6ba5e23-ec73-4e63-b3d4-af4d5c372903'] = [{"text": "Occurence of Derry", "ranges": [{"start": "/", "end": "/", "startOffset": 58, "endOffset": 63}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-f6ba5e23-ec73-4e63-b3d4-af4d5c372903" class="annotation-box">
+            I thank the Minister for his answer. I have met groups in Derry, and some currently receive funding from the EU social fund, and others do not. They have expressed concerns to me about the difficulties in accessing PEACE funding. Have those been addressed in PEACE PLUS?
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 899}</td><td>city-cropped-up</td><td>Found dublin</td><td>
+            <script>
+                annotations['content-9b101295-b170-4e2f-94ac-0dff1a159189'] = [{"text": "Occurence of Dublin", "ranges": [{"start": "/", "end": "/", "startOffset": 211, "endOffset": 217}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-9b101295-b170-4e2f-94ac-0dff1a159189" class="annotation-box">
+            We have had a number of conversations about the development of the PEACE PLUS programme with the Special EU Programmes Body ([GDPRREDACT]). We have also had conversations with Ministers in the Administration in Dublin, who have joint responsibility for that, and, collectively, we expressed the views that had been brought to us when we spoke to people in grassroots community organisations about their experience of accessing PEACE money over the years. The burden of administration and the issue of accessibility came up repeatedly. So, we have asked [GDPRREDACT] to address that in the current PEACE PLUS proposals. The purpose of PEACE money was to get money directly to communities on the ground that were affected by and still bore the scars of the conflict. We need to ensure that those finances are made as accessible to them as possible. The SEUPB has assured us that that will be the case.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 637}</td><td>city-cropped-up</td><td>Found london</td><td>
+            <script>
+                annotations['content-1caa2ab5-fe99-4d8f-a83f-074505cf1979'] = [{"text": "Occurence of London", "ranges": [{"start": "/", "end": "/", "startOffset": 112, "endOffset": 118}], "tags": ["INFO", "city"]}, {"text": "Occurence of London", "ranges": [{"start": "/", "end": "/", "startOffset": 355, "endOffset": 361}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-1caa2ab5-fe99-4d8f-a83f-074505cf1979" class="annotation-box">
+            We intend to, and have agreed that we will, continue, but it is just very unfortunate that none of us can go to London to meet collectively in the Treasury. We have to make joint virtual representations at the moment to the Treasury, but we will continue to do that. I think that it is a most unsatisfactory approach by the Treasury and the Government in London generally, and it is certainly not what we were promised. There was to have been a pilot programme for next year and, as yet, we do not have any detail on that at all. There is a real concern that, in the transition of that, we are going to lose substantial amounts of money.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 1082}</td><td>city-cropped-up</td><td>Found dublin</td><td>
+            <script>
+                annotations['content-7500e354-8b59-4073-bb1d-8f3aeaf36743'] = [{"text": "Occurence of Dublin", "ranges": [{"start": "/", "end": "/", "startOffset": 53, "endOffset": 59}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-7500e354-8b59-4073-bb1d-8f3aeaf36743" class="annotation-box">
+            Following discussions between, in particular, us and Dublin, and then with London, we have managed to get an increase, which is a very welcome contribution from Whitehall. That brings the total amount of funding up to about EUR1 billion, and that will be over six or seven years for the roll-out. The current Peace programme is continuing to roll out until the end of this year, and the new funding will come in then from the next financial year and beyond. It is a substantial amount of money over six or seven years. There will undoubtedly be, as there always is with Peace funding, huge demand on the ground. As you will know, PEACE PLUS is taking in the INTERREG proportion of that, as well as the Peace programme. Nonetheless, I am very pleased that we have managed to bring it up from what was originally sitting at about EUR650 million to EUR1 billion. I have no doubt that, if we can get the programme designed correctly and if people engage with this consultation as it comes out this month, then we can get the best possible usage of that on the ground where it is needed.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 1082}</td><td>city-cropped-up</td><td>Found london</td><td>
+            <script>
+                annotations['content-39c75748-468a-46c9-a33d-fc2fa2d77575'] = [{"text": "Occurence of London", "ranges": [{"start": "/", "end": "/", "startOffset": 75, "endOffset": 81}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-39c75748-468a-46c9-a33d-fc2fa2d77575" class="annotation-box">
+            Following discussions between, in particular, us and Dublin, and then with London, we have managed to get an increase, which is a very welcome contribution from Whitehall. That brings the total amount of funding up to about EUR1 billion, and that will be over six or seven years for the roll-out. The current Peace programme is continuing to roll out until the end of this year, and the new funding will come in then from the next financial year and beyond. It is a substantial amount of money over six or seven years. There will undoubtedly be, as there always is with Peace funding, huge demand on the ground. As you will know, PEACE PLUS is taking in the INTERREG proportion of that, as well as the Peace programme. Nonetheless, I am very pleased that we have managed to bring it up from what was originally sitting at about EUR650 million to EUR1 billion. I have no doubt that, if we can get the programme designed correctly and if people engage with this consultation as it comes out this month, then we can get the best possible usage of that on the ground where it is needed.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': 0, 'character': 0}<br/>TO: {'line': 0, 'character': 771}</td><td>city-cropped-up</td><td>Found dublin</td><td>
+            <script>
+                annotations['content-0e25da47-15df-4217-93ea-b5b9d79375d1'] = [{"text": "Occurence of Dublin", "ranges": [{"start": "/", "end": "/", "startOffset": 611, "endOffset": 617}], "tags": ["INFO", "city"]}];
+            </script>
+            <div id="content-0e25da47-15df-4217-93ea-b5b9d79375d1" class="annotation-box">
+            I am certainly supportive of the two-island approach to hotel quarantine, specifically working on a five-nations basis to progress that. There will be a quad meeting this afternoon between us, the Secretary of State and Ministers from the Republic of Ireland, at which, I am sure, that issue will be raised. The Member will be aware that there were concerns about the sharing of data and information on passenger locator forms. That work is still ongoing. We hope that there will be a resolution as to how that data can be shared. The Member knows that, if we do not get that information from people landing at Dublin Airport, there is a weakness in the steps that we take in Northern Ireland, so we need a two-island approach, as he rightly acknowledged in his question.
+            </div>
+            </td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': None, 'character': None}<br/>TO: {'line': None, 'character': None}</td><td>city-totals</td><td>Found 0 occurrences of Armagh</td><td></td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': None, 'character': None}<br/>TO: {'line': None, 'character': None}</td><td>city-totals</td><td>Found 2 occurrences of Belfast</td><td></td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': None, 'character': None}<br/>TO: {'line': None, 'character': None}</td><td>city-totals</td><td>Found 1 occurrences of Derry</td><td></td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': None, 'character': None}<br/>TO: {'line': None, 'character': None}</td><td>city-totals</td><td>Found 0 occurrences of Lisburn</td><td></td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': None, 'character': None}<br/>TO: {'line': None, 'character': None}</td><td>city-totals</td><td>Found 0 occurrences of Newry</td><td></td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': None, 'character': None}<br/>TO: {'line': None, 'character': None}</td><td>city-totals</td><td>Found 4 occurrences of Dublin</td><td></td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': None, 'character': None}<br/>TO: {'line': None, 'character': None}</td><td>city-totals</td><td>Found 4 occurrences of London</td><td></td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+<tr><td>lintol-code-challenge-city-finder:1</td><td>FROM: {'line': None, 'character': None}<br/>TO: {'line': None, 'character': None}</td><td>city-totals</td><td>Found 2 occurrences of Brussels</td><td></td><td class="field-json" data-json="{}"></td><td></td><td class="field-json" data-json="[]"></td>
+</tbody>
+</table>
+</div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/renderjson@1.4.0/renderjson.min.js"></script>
+    <script>
+      class Annotation {
+        constructor(a) {
+          this._ann = a;
+        }
+
+        tags () {
+          return this._ann.tags;
+        }
+
+        start() {
+          return this._ann.ranges[0].startOffset;
+        }
+
+        end() {
+          return this._ann.ranges[0].endOffset;
+        }
+
+        note() {
+          return this._ann.text;
+        }
+      };
+
+      var jsonFields = document.getElementsByClassName("field-json");
+      Array.prototype.forEach.call(jsonFields, function (dest) {
+        var jsonObj = dest.dataset.json;
+        dest.appendChild(renderjson(JSON.parse(jsonObj)));
+      });
+      function clearNote(textId) {
+        $('#' + textId + '-note').hide();
+      };
+      function setNote(textId, ann) {
+        const note = $(ann).find('.annotation-note-content').text();
+        $('#' + textId + '-note').text(note);
+        $('#' + textId + '-note').show();
+      };
+      $(function ($) {
+        for (textId in annotations) {
+          const atr = $('#' + textId);
+          atr.textId = textId;
+          atr.mouseleave(function () {
+            clearNote(this.textId)
+          }.bind(atr));
+          const text = atr.text().trim();
+          let html = '';
+          const anns = annotations[textId].map(ann => new Annotation(ann)).sort((a, b) => a.start() - b.start());
+          let lastEnd = 0;
+          for (var ix = 0; ix < anns.length; ix += 1) {
+            const ann = anns[ix];
+            const nextStart = ix < anns.length - 1 ? anns[ix + 1].start() : text.length;
+            const end = nextStart < ann.end() ? nextStart : ann.end();
+            const start = ann.start();
+
+            html += text.substr(lastEnd, start - lastEnd);
+            // NB: this is not SAFE, this is for test purposes
+            html += '<span onclick="setNote(\'' + textId + '\', this)" class="annotation ' + ann.tags().map(tag => 'annotation-tag-' + tag).join(' ') + '">' + text.substr(start, end - start) + '<span class="annotation-note-content">' + ann.note() + '</span></span>';
+            lastEnd = end;
+          }
+          html += text.substr(lastEnd, text.length - lastEnd);
+          html += '<div id="' + textId + '-note" class="annotation-note">NOTE</div>';
+          atr.html(html);
+        }
+      });
+    </script>
+  </body>
+</html>
