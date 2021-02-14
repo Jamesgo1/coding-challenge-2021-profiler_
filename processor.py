@@ -136,7 +136,7 @@ class CityFinderProcessor(DoorstepProcessor):
     code = 'lintol-code-challenge-city-finder:1'
 
     # This is a short phrase or description explaining the processor.
-    description = _("City Finder for Lintol Coding Challenge")
+    description = "City Finder for Lintol Coding Challenge"
 
     # Some of our processors get very complex, so this lets us build up execution graphs
     # However, for the coding challenge, you probably only want one or more steps.

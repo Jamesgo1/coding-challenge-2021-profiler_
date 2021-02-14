@@ -1,1 +1,1 @@
-https://gitlab.com/lintol/doorstep@master
+ltldoorstep>=0.3.1
