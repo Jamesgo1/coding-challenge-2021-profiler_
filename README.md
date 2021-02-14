@@ -15,7 +15,7 @@ If you install and run `pytest`, this will help you automate checking changes. I
 ## Evaluation
 
 To be eligible for submission, your processor **must** be public, MIT/Apache licensed and build an output HTML report automatically from git.
-The simplest way to do this, is to fork this repository - when you commit, Gitlab will automatically start building and pushing the output report to
+The simplest way to do this, is to fork this repository - when you commit to _master_, Gitlab will automatically start building and pushing the output report to
 https://YOURACCOUNT.gitlab.io/FORKEDREPONAME . Before submitting, make 100% sure it is appearing correctly and automatically there (you can check
 build progress each time you push commits by going to the "Pipelines" page on Gitlab.
 
