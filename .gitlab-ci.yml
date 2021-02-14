@@ -8,15 +8,26 @@ variables:
   DOCKER_HOST: tcp://localhost:2375/
 
 stages:
-- build
 - test
-- release
-- deploy
+- pages
 
 test:
-  stage: build
+  stage: test
   image: python:3.8
   script:
     - "pip install -r requirements.txt"
     - pip install pytest
     - pytest
+
+pages:
+  stage: pages
+  image: python:3.8
+  script:
+    - "pip install -r requirements.txt"
+    - mkdir public
+    - ltldoorstep -o html --output-file public/index.html process sample_transcripts/out-example-2021-02-01-hansard-plenary.txt processor.py -e dask.threaded
+  artifacts:
+    paths:
+    - public
+  only:
+    master

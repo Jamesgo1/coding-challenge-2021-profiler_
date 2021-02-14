@@ -15,4 +15,8 @@ def testing_city_finder():
     with open('./tests/test_report.json', 'r') as json_file:
         expected_report = json.load(json_file)
 
-    assert expected_report == report.compile()
+    compiled_report = report.compile()
+    # Once you have a working version of your processor, we recommend that you
+    # get the JSON output (python3 processor.py out...txt) and save it to tests/test_report.json
+    # Then uncomment the line below - this will alert you if your processor output ever changes!
+    # assert expected_report == compiled_report
