@@ -1,6 +1,6 @@
 This data is available via the NI Assembly's Open Data portal.
 
-From the (http://data.niassembly.gov.uk/)[http://data.niassembly.gov.uk/] website:
+From the [http://data.niassembly.gov.uk/](http://data.niassembly.gov.uk/) website:
 
 > How can I use this data?
 > The data and information available through data.niassembly.gov.uk are available under terms described in the Open Government Licence.
