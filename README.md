@@ -12,9 +12,11 @@ This will create output.html in the current directory and, in a browser (tested 
 
 If you install and run `pytest`, this will help you automate checking changes. It will run the example test function in test_processor.py.
 
+For more detail on installation and set-up steps, check out HOWTO_detailed.pdf - these steps are based on Linux use, but similar steps to other operating systems.
+
 ## Evaluation
 
-To be eligible for submission, your processor **must** be public, MIT/Apache licensed and build an output HTML report automatically from git.
+To be eligible for submission, your processor **must** be public, MIT/Apache licensed and build an output HTML \[Lintol\] report automatically from git.
 The simplest way to do this, is to fork this repository - when you commit to _master_, Gitlab will automatically start building and pushing the output report to
 https://YOURACCOUNT.gitlab.io/FORKEDREPONAME . Before submitting, make 100% sure it is appearing correctly and automatically there (you can check
 build progress each time you push commits by going to the "Pipelines" page on Gitlab.
