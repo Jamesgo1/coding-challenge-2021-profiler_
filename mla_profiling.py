@@ -1,4 +1,4 @@
-from processor_classes import build_hansard_corpus
+import build_hansard_corpus
 import gender_guesser.detector as gender_detector
 from geopy.distance import distance
 from geopy import Nominatim

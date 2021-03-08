@@ -191,7 +191,9 @@ class DiscreteAnalyticsCreator:
             expected_proportion = expected_proportions_dict[k]
             proportion_found = v
             proportion_diff = proportion_found - expected_proportion
-            proportion_diff_dict[k] = proportion_diff
+            proportion_diff_as_pcnt = proportion_diff * 100
+            proportion_diff_as_pcnt_1dp = round(proportion_diff_as_pcnt, 1)
+            proportion_diff_dict[k] = proportion_diff_as_pcnt_1dp
         return proportion_diff_dict
 
     def run_calculation(self):

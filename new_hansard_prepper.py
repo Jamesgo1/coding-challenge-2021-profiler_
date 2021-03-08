@@ -28,6 +28,18 @@ class HansardTextFormatter:
             config = {"PERSON": AnonymizerConfig("replace", {"replace_text": "[GDPRREDACT]"})}
             return self.anonymizer_engine.anonymize(text, results, config)
 
+    @staticmethod
+    def clean_text(text):
+        text = text.replace('\n', '')
+        text = text.replace('<BR />', '\n')
+        return text
+
+    def run_formatter(self, text):
+        anon_text = self.run_anonymizer(text)
+        cleaned_text = self.clean_text(anon_text)
+        return cleaned_text
+
+
 
 hansard_anon = HansardTextFormatter()
 

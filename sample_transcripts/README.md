@@ -4,14 +4,22 @@
 
 This is an example of a Lintol processor. You can run it like so:
 
-    python3 processor.py out-example-2021-02-01-hansard-plenary.txt
+    ltldoorstep -o html --output-file output.html process None profile_processor.py -e dask.threaded
 
-or, if you would like a nicely-formatted HTML page to look at:
+This will create output.html in the current directory and, in a browser (tested with Chrome).
 
-    ltldoorstep -o html --output-file output.html process sample_transcripts/out-example-2021-02-01-hansard-plenary.txt processor.py -e dask.threaded
+Unfortunately, custom date ranges, identifiers, and outputs have not been implemented for the command line. However, to
+run this locally:
 
-This will create output.html in the current directory and, in a browser (tested with Chrome), should look like
-output.png.
+~~~
+import profile_processor_with_imports
+
+profile_analyzer = profile_processor_with_imports.ProfileAnalyzer()
+profile_analyzer.get_identifiers("gender")
+profile_analyzer.get_output_analytics("word_count")
+profile_analyzer.get_date_range(start_date="2020-01-01", end_date="2021-01-01")
+analysis_output_dict = profile_analyzer.run_profile_analysis()
+~~~
 
 ## What does it do?
 
@@ -71,7 +79,7 @@ comes to larger timeframes and therefore bigger datasets. Plainly, it's too slow
 loops, the processing becomes exponentially expensive rather than in a more linear fashion.
 
 There are clear opportunities for parallelization, particularly when it comes to iterating through different profile
-options.
+options. Unfortunately, this is a topic I'm not very experienced in, so was not sure exactly how to implement this.
 
 Additionally, this processor has focused heavily on the grunt work of getting the data into a workable format. It is my
 hope that this foundation can allow for the more illuminating side of data analysis. It would be interesting to take the
@@ -79,10 +87,13 @@ data from this processor and visualize trends over time - such as the changing l
 
 ## Notes
 
-You do not have to use Python, or a specific version of Python, _provided_ that your code takes in and outputs the
-correct reporting schemas. The easiest way to ensure this is to use the Python ltldoorstep libraries as shown here (it
-handles that automatically for you).
+A fair bit less was implemented than hoped. Unfortunately, my ideas are a lot greater than my time.
 
-You are welcome to add additional open source dependencies to the requirements.txt, or additional open data to add extra
-reports. While we do not expressly prohibit calling out to external services, solutions that run without hitting
-third-party APIs may be seen more favourably.
+Please see TODOs for details in the code.
+
+To summarize feautres I planned to add:
+
+- Add highlighting of desired analytic (e.g. highlight all instances of the DUP being interrupted)
+- Add commandline options (date, identifiers, analytics)
+- Add data visualization.
+- Testing. Sorry Kent Beck.
