@@ -10,6 +10,7 @@ from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.anonymizers import Replace
 from presidio_anonymizer.entities import AnonymizerRequest
 
+
 def run_anonymizer(engine, text, analyzer_results, transformations=None):
     req = AnonymizerRequest({
         'analyzer_results': [res.to_dict() for res in analyzer_results],
@@ -19,6 +20,7 @@ def run_anonymizer(engine, text, analyzer_results, transformations=None):
     trans = req.get_transformation('PERSON')
     trans['replace_text'] = "[GDPRREDACT]"
     return engine.anonymize(req)
+
 
 class HansardCleaner:
     def initialize(self):
@@ -37,16 +39,17 @@ class HansardCleaner:
             text = elem.text.strip()
             if text:
                 results = self.analyzer_engine.analyze(correlation_id=0,
-                                          text = text,
-                                          entities=[],
-                                          language='en',
-                                          score_threshold=0.5)
+                                                       text=text,
+                                                       entities=[],
+                                                       language='en',
+                                                       score_threshold=0.5)
                 if results:
                     elem.text = run_anonymizer(self.anonymizer_engine, text, results)
 
         new_filename = f'out-{xml_filename}'
         etree.write(new_filename)
         return new_filename
+
 
 class HansardTextExtractor:
     def run(self, xml_filename):
@@ -69,6 +72,7 @@ class HansardTextExtractor:
         text_filename = xml_filename.replace('.xml', '.txt')
         with open(text_filename, 'w') as text_file:
             text_file.write(proceedings_plaintext)
+
 
 if __name__ == "__main__":
     try:

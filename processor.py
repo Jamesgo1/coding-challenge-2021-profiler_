@@ -26,6 +26,7 @@ from ltldoorstep.document_utils import load_text, split_into_paragraphs
 # We name some cities - we will do all our comparisons in lowercase to match any casing
 CITIES = ['armagh', 'belfast', 'derry', 'lisburn', 'newry', 'dublin', 'london', 'brussels']
 
+
 def city_finder(text, rprt):
     """
     Add report items to indicate where cities appear, and how often in total
@@ -120,6 +121,7 @@ def city_finder(text, rprt):
 
     return rprt
 
+
 class CityFinderProcessor(DoorstepProcessor):
     """
     This class wraps some of the Lintol magic under the hood, that lets us plug
@@ -149,13 +151,15 @@ class CityFinderProcessor(DoorstepProcessor):
             'step-A': (city_finder, 'load-text', 'get-report'),
             # 'step-B': (town_finder, 'load-text', 'get-report'),
             # 'step-C': (country_finder, 'load-text', 'get-report'),
-            'output': (workflow_condense, 'step-A') #, 'step-B', 'step-C')
+            'output': (workflow_condense, 'step-A')  # , 'step-B', 'step-C')
         }
         return workflow
+
 
 # If there are several steps, this final function pulls them into one big report.
 def workflow_condense(base, *args):
     return combine_reports(*args, base=base)
+
 
 # This is the actual variable Lintol looks for to set up the processor - you
 # shouldn't need to touch it (except to change the class name, if neeeded)
